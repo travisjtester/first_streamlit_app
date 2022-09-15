@@ -37,14 +37,13 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #writes formatted and normalized jason data to screen
 streamlit.dataframe(fruityvice_normalized)
 
-
 #import snowflake connection
 import snowflake.connector
 
 # test query on new snowflake connection in Streamlit
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("select * from")
+my_cur.execute("select * ")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list contains:")
 streamlit.dataframe(my_data_rows)
