@@ -51,7 +51,6 @@ streamlit.write('The user entered', fruit_choice)
 #import requests
 
 # test query on new snowflake connection in Streamlit
-my_data_rows 
 streamlit.header("The Fruit Load List contains:")
 #Snowflake-related functions
 def get_fruit_load_list():
